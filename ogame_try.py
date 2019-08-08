@@ -56,7 +56,7 @@ def ship_everything_to_mother(planet_name):
 
 
 if __name__ == "__main__":
-    planets_names_list = ["MediaWorld", "Amazon", "Trony", "Saturn"]
+    planets_names_list = ["MediaWorld", "Amazon", "Trony","Unieuro","Alibaba", "Saturn"]
     for planet in planets_names_list:
         print("evaluating planet %s" % planet)
         build_resources(planet)
