@@ -31,7 +31,7 @@ def ship_slow_everything_to_Mediaworld():
 def log_in():
     return OGame('Indus', 'hotgigi82@hotmail.com', '1101982.Ogame')
 
-if __name__=='__main__':    
+if __name__=="__main__":    
     ogame = log_in()
     if ogame.is_under_attack():
         ship_slow_everything_to_Mediaworld()
