@@ -22,7 +22,7 @@ def ship_slow_everything_to_Mediaworld():
     mission = Missions['Transport']
     resources = {'metal': 999999999, 'crystal': 999999999, 'deuterium': 9999999999}
     ogame.send_fleet(ogame.get_planet_by_name('Saturn'),
-                     ships, ‚
+                     ships, 
                      speed, 
                      where, 
                      mission, 

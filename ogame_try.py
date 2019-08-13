@@ -20,11 +20,6 @@ def build_resources(planet_name):
         for i in ["SolarPlant", "FusionReactor"]:
             ogame.build_building(ogame.get_planet_by_name(planet_name), Buildings[i])
             if len(ogame.get_overview(planet_name)["buildings"]) != 0:
-                print(
-                    ogame.get_overview(ogame.get_planet_by_name(planet_name))[
-                        "buildings"
-                    ]
-                )
                 break
     else:
         print("Trying build resources for the planet %s" % planet_name)
