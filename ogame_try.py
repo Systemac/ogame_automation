@@ -32,9 +32,9 @@ def build_resources(planet_name):
             "CrystalMine",
             "MetalMine",
             "DeuteriumSynthesizer",
-            "MetalStorage",
-            "CrystalStorage",
-            "DeuteriumTank",
+            # "MetalStorage",
+            # "CrystalStorage",
+            # "DeuteriumTank",
         ]:
             ogame.build_building(ogame.get_planet_by_name(planet_name), Buildings[k])
             if len(ogame.get_overview(planet_name)["buildings"]) != 0:
@@ -65,8 +65,8 @@ if __name__ == "__main__":
         print("sending resources from %s" % planet)
         ship_everything_to_mother(planet)
     # Research
-    for i in Research:
+    '''for i in Research:
         ogame.build(ogame.get_planet_by_name("Saturn"), Research[i])
         if len(ogame.get_overview("Saturn")["research"]) != 0:
             print(ogame.get_overview("Saturn")["research"][0])
-            break
+            break'''
