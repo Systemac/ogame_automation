@@ -1,5 +1,5 @@
 from ogame import OGame
-from ogame.constants import Ships, Speed, Missions, Buildings, Research, Defense
+from ogame.constants import Ships, Speed, Missions, Buildings, Research, Defense, Facilities
 
 ogame = OGame("Indus", "hotgigi82@hotmail.com", "1101982.Ogame")
 
@@ -26,7 +26,7 @@ def build_resources(planet_name):
         for k in [
             "CrystalMine",
             "MetalMine",
-            "DeuteriumSynthesizer",
+            # "DeuteriumSynthesizer",
             # "MetalStorage",
             # "CrystalStorage",
             # "DeuteriumTank",
@@ -55,6 +55,13 @@ if __name__ == "__main__":
     for planet in planets_names_list:
         print("evaluating planet %s" % planet)
         build_resources(planet)
+    for planet in planets_names_list:
+        try:
+            ogame.build(planet,Facilities['RoboticsFactory'])
+            ogame.build(planet,Facilities['MissileSilo'])
+            ogame.build(planet,Facilities['NaniteFactory'])
+        except:
+            pass
     # Sending Resources to mother
     for planet in planets_names_list[:-1]:
         print("sending resources from %s" % planet)
