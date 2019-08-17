@@ -16,7 +16,7 @@ def ship_slow_everything_to_Saturn():
                          resources)    
 
 def ship_slow_everything_to_Mediaworld():
-    ships = [(Ships['LargeCargo'], 9999),(Ships['LightFighter'], 9999),(Ships['Cruiser'], 9999), (Ships['Recycler'], 9999)]
+    ships = [(Ships['LargeCargo'], 9999),(Ships['LightFighter'], 9999), (Ships['EspionageProbe'], 999),(Ships['Cruiser'], 9999), (Ships['Recycler'], 9999)]
     speed = Speed['10%']
     where = {'galaxy': 1, 'system': 434, 'position': 10}
     mission = Missions['Transport']
