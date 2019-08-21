@@ -39,10 +39,10 @@ def build_resources(planet_name):
                 pass
 
 
-def ship_everything_to_mother(planet_name):
+def ship_everything_to_moon(planet_name):
     ships = [(Ships["LargeCargo"], 99)]
     speed = Speed["100%"]
-    where = {"galaxy": 5, "system": 432, "position": 8}
+    where = {"galaxy": 5, "system": 432, "position": 8,'type':3}
     mission = Missions["Transport"]
     resources = {"metal": 999999999, "crystal": 999999999, "deuterium": 9999999999}
     ogame.send_fleet(
@@ -52,7 +52,7 @@ def ship_everything_to_mother(planet_name):
 
 if __name__ == "__main__":
     planets_names_list = ["MediaWorld", "Amazon", "Trony","Unieuro","Alibaba", "Saturn"]
-    for planet in planets_names_list:
+    '''for planet in planets_names_list:
         print("evaluating planet %s" % planet)
         build_resources(planet)
     for planet in planets_names_list:
@@ -61,11 +61,11 @@ if __name__ == "__main__":
             ogame.build(planet,Facilities['MissileSilo'])
             ogame.build(planet,Facilities['NaniteFactory'])
         except:
-            pass
+            pass'''
     # Sending Resources to mother
-    for planet in planets_names_list[:-1]:
+    for planet in planets_names_list:
         print("sending resources from %s" % planet)
-        ship_everything_to_mother(planet)
+        ship_everything_to_moon(planet)
     # Research
     '''for i in Research:
         ogame.build(ogame.get_planet_by_name("Saturn"), Research[i])
