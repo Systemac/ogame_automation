@@ -7,7 +7,7 @@ def log_in():
 
 def ship_slow_everything_to_Moons(n=9999):
     ships = [(Ships['LargeCargo'], n),(Ships['LightFighter'], n),(Ships['Cruiser'], n), (Ships['Recycler'], n)]
-    speed = Speed['60%']
+    speed = Speed['50%']
     where_Mediaworld = {'galaxy': 1, 'system': 434, 'position': 10, 'type':3}
     where_Saturn = {'galaxy': 5, 'system': 432, 'position': 8, 'type':3}
     mission = Missions['Transport']
@@ -43,9 +43,9 @@ def ship_to_moon_from_moons(n=9999):
 
 if __name__=="__main__":    
     ogame = log_in()
-    if not ogame.is_under_attack():
-        ship_to_moon_from_moons()
-        ship_slow_everything_to_Moons()
+    if ogame.is_under_attack():
+        ship_to_moon_from_moons(n=9999)
+        ship_slow_everything_to_Moons(n=9999)
         ogame.logout()
     else:
         ogame.logout()
