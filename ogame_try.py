@@ -59,10 +59,35 @@ def deploy_fleet_to_moon(planet_name):
         ogame.get_planet_by_name(planet_name), ships, speed, where, mission, resources
     )
 
+def ship_everything_to_Moons(n=999):
+    ships = [(Ships['LargeCargo'], n)]
+    speed = Speed['100%']
+    where_Mediaworld = {'galaxy': 1, 'system': 434, 'position': 10, 'type':3}
+    where_Saturn = {'galaxy': 5, 'system': 432, 'position': 8, 'type':3}
+    mission = Missions['Transport']
+    for planet_name in ['MediaWorld','Decathlon']:
+        resources = {'metal': 999999999, 'crystal': 999999999, 'deuterium': 9999999999}
+        ogame.send_fleet(ogame.get_planet_by_name(planet_name),
+                         ships, 
+                         speed, 
+                         where_Mediaworld,
+                         mission, 
+                         resources)
+    for planet_name in ['Saturn','Amazon','Trony','Alibaba','Unieuro']:
+        resources = {'metal': 999999999, 'crystal': 999999999, 'deuterium': 9999999999}
+        ogame.send_fleet(ogame.get_planet_by_name(planet_name),
+                         ships, 
+                         speed, 
+                         where_Saturn,
+                         mission, 
+                         resources)       
 
 if __name__ == "__main__":
+    ship_everything_to_Moons(n=99)
+'''
+def ship_everything_to_Moons(n=999):
     planets_names_list = ["MediaWorld", "Amazon", "Trony","Unieuro","Alibaba", "Saturn"]
-    '''for planet in planets_names_list:
+    for planet in planets_names_list:
         print("evaluating planet %s" % planet)
         build_resources(planet)
     for planet in planets_names_list:
@@ -71,14 +96,14 @@ if __name__ == "__main__":
             ogame.build(planet,Facilities['MissileSilo'])
             ogame.build(planet,Facilities['NaniteFactory'])
         except:
-            pass'''
+            pass
     # Sending Resources to mother
     for planet in planets_names_list:
         print("sending resources from %s" % planet)
         ship_everything_to_moon(planet)
     deploy_fleet_to_moon('Saturn')    
     # Research
-    '''for i in Research:
+    for i in Research:
         ogame.build(ogame.get_planet_by_name("Saturn"), Research[i])
         if len(ogame.get_overview("Saturn")["research"]) != 0:
             print(ogame.get_overview("Saturn")["research"][0])
