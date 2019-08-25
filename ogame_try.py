@@ -49,12 +49,22 @@ def ship_everything_to_moon(planet_name):
         ogame.get_planet_by_name(planet_name), ships, speed, where, mission, resources
     )
 
-def deploy_fleet_to_moon(planet_name):
-    ships = [(Ships['LightFighter'], 9999), (Ships['EspionageProbe'], 999),(Ships['Cruiser'], 9999), (Ships['Recycler'], 9999)]
+def deploy_fleet_to_moon_Saturn(planet_name='Saturn'):
+    ships = [(Ships['LightFighter'], 999), (Ships['Cruiser'], 999), (Ships['Recycler'], 999), (Ships['Battleship'], 999)]
     speed = Speed["100%"]
     where = {"galaxy": 5, "system": 432, "position": 8,'type':3}
     mission = Missions["Park"]
-    resources = {"metal": 999999999, "crystal": 999999999, "deuterium": 9999999999}
+    resources = {"metal": 99, "crystal": 99, "deuterium": 9999}
+    ogame.send_fleet(
+        ogame.get_planet_by_name(planet_name), ships, speed, where, mission, resources
+    )
+
+def deploy_fleet_to_moon_MediaWorld(planet_name='MediaWorld'):
+    ships = [(Ships['LightFighter'], 999),(Ships['Cruiser'], 999), (Ships['Recycler'], 999), (Ships['Battleship'], 999)]
+    speed = Speed["100%"]
+    where = {"galaxy": 1, "system": 434, "position": 10,'type':3}
+    mission = Missions["Park"]
+    resources = {"metal": 99, "crystal": 99, "deuterium": 9999}
     ogame.send_fleet(
         ogame.get_planet_by_name(planet_name), ships, speed, where, mission, resources
     )
@@ -83,7 +93,9 @@ def ship_everything_to_Moons(n=999):
                          resources)       
 
 if __name__ == "__main__":
-    ship_everything_to_Moons(n=99)
+    #   ship_everything_to_Moons(n=99)
+    deploy_fleet_to_moon_Saturn(planet_name='Saturn')
+    deploy_fleet_to_moon_MediaWorld(planet_name='MediaWorld')
 '''
 def ship_everything_to_Moons(n=999):
     planets_names_list = ["MediaWorld", "Amazon", "Trony","Unieuro","Alibaba", "Saturn"]
