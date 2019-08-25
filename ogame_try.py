@@ -93,7 +93,7 @@ def ship_everything_to_Moons(n=999):
                          resources)       
 
 if __name__ == "__main__":
-    #   ship_everything_to_Moons(n=99)
+    ship_everything_to_Moons(n=99)
     deploy_fleet_to_moon_Saturn(planet_name='Saturn')
     deploy_fleet_to_moon_MediaWorld(planet_name='MediaWorld')
 '''
