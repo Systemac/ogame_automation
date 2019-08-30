@@ -50,7 +50,8 @@ def ship_everything_to_moon(planet_name):
     )
 
 def deploy_fleet_to_moon_Saturn(planet_name='Saturn'):
-    ships = [(Ships['LightFighter'], 999), (Ships['Cruiser'], 999), (Ships['Recycler'], 999), (Ships['Battleship'], 999)]
+    ships = [(Ships['LightFighter'], 999), (Ships['Cruiser'], 999), (Ships['Recycler'], 999), (Ships['Battleship'], 999),
+    (Ships['Bomber'], 999),(Ships['Destroyer'], 999),(Ships['Battlecruiser'], 999)]
     speed = Speed["100%"]
     where = {"galaxy": 5, "system": 432, "position": 8,'type':3}
     mission = Missions["Park"]
@@ -60,7 +61,8 @@ def deploy_fleet_to_moon_Saturn(planet_name='Saturn'):
     )
 
 def deploy_fleet_to_moon_Decathlon(planet_name='Decathlon'):
-    ships = [(Ships['LightFighter'], 999), (Ships['Cruiser'], 999), (Ships['Recycler'], 999), (Ships['Battleship'], 999)]
+    ships = [(Ships['LightFighter'], 999), (Ships['Cruiser'], 999), (Ships['Recycler'], 999), (Ships['Battleship'], 999),
+    (Ships['Bomber'], 999),(Ships['Destroyer'], 999),(Ships['Battlecruiser'], 999)]
     speed = Speed["100%"]
     where = {"galaxy": 1, "system": 435, "position": 8,'type':8}
     mission = Missions["Park"]
@@ -70,7 +72,8 @@ def deploy_fleet_to_moon_Decathlon(planet_name='Decathlon'):
     )
 
 def deploy_fleet_to_moon_MediaWorld(planet_name='MediaWorld'):
-    ships = [(Ships['LightFighter'], 999),(Ships['Cruiser'], 999), (Ships['Recycler'], 999), (Ships['Battleship'], 999)]
+    ships = [(Ships['LightFighter'], 999),(Ships['Cruiser'], 999), (Ships['Recycler'], 999), (Ships['Battleship'], 999),
+    (Ships['Bomber'], 999),(Ships['Destroyer'], 999),(Ships['Battlecruiser'], 999)]
     speed = Speed["100%"]
     where = {"galaxy": 1, "system": 434, "position": 10,'type':3}
     mission = Missions["Park"]

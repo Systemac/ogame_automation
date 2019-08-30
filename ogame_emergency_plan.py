@@ -6,7 +6,8 @@ def log_in():
 
 
 def ship_slow_everything_to_Moons(n=9999):
-    ships = [(Ships['LargeCargo'], n),(Ships['LightFighter'], n),(Ships['Cruiser'], n), (Ships['Recycler'], n), (Ships['Battleship'], n)]
+    ships = [(Ships['LargeCargo'], n),(Ships['LightFighter'], n),(Ships['Cruiser'], n), (Ships['Recycler'], n), (Ships['Battleship'], n),
+    (Ships['Destroyer'], n),(Ships['Bomber'], n),(Ships['Battlecruiser'], n)]
     speed = Speed['50%']
     where_Mediaworld = {'galaxy': 1, 'system': 434, 'position': 10, 'type':3}
     where_Saturn = {'galaxy': 5, 'system': 432, 'position': 8, 'type':3}
@@ -31,7 +32,8 @@ def ship_slow_everything_to_Moons(n=9999):
 
 
 def ship_to_moon_from_moons(n=9999):
-    ships = [(Ships['LargeCargo'], n) ,(Ships['LightFighter'], n), (Ships['EspionageProbe'], n),(Ships['Cruiser'], n), (Ships['Recycler'], n), (Ships['Battleship'], n)]
+    ships = [(Ships['LargeCargo'], n) ,(Ships['LightFighter'], n), (Ships['EspionageProbe'], n),(Ships['Cruiser'], n), (Ships['Recycler'], n), (Ships['Battleship'], n),
+    (Ships['Destroyer'], n),(Ships['Bomber'], n),(Ships['Battlecruiser'], n)]
     speed = Speed['50%']
     where_Mediaworld = {'galaxy': 1, 'system': 434, 'position': 10, 'type':3}
     where_Saturn = {'galaxy': 5, 'system': 432, 'position': 8, 'type':3}
