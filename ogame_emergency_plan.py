@@ -21,7 +21,7 @@ def ship_slow_everything_to_Moons(n=9999):
                          where_Decathlon,
                          mission, 
                          resources)
-    for planet_name in ['MediaWorld','Decathlon']:
+    for planet_name in ['MediaWorld','Decathlon','Ikea']:
         resources = {'metal': 999999999, 'crystal': 999999999, 'deuterium': 9999999999}
         ogame.send_fleet(ogame.get_planet_by_name(planet_name),
                          ships, 
