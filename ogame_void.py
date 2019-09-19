@@ -21,7 +21,7 @@ def ship_everything_to_Void(n=999):
         ogame.send_fleet(ogame.get_planet_by_name(planet),
                          ships, 
                          speed, 
-                         where_Decathlon,
+                         where_Void,
                          mission, 
                          resources)
     
