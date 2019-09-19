@@ -16,19 +16,19 @@ def ship_slow_everything_to_Moons(n=9999):
     for planet_name in ['Saturn','Amazon','Trony','Alibaba','Unieuro']:
         resources = {'metal': 999999999, 'crystal': 999999999, 'deuterium': 9999999999}
         ogame.send_fleet(ogame.get_planet_by_name(planet_name),
-                         ships, 
-                         speed, 
+                         ships,
+                         speed,
                          where_Decathlon,
-                         mission, 
+                         mission,
                          resources)
     for planet_name in ['MediaWorld','Decathlon','Ikea']:
         resources = {'metal': 999999999, 'crystal': 999999999, 'deuterium': 9999999999}
         ogame.send_fleet(ogame.get_planet_by_name(planet_name),
-                         ships, 
-                         speed, 
+                         ships,
+                         speed,
                          where_Saturn,
-                         mission, 
-                         resources)       
+                         mission,
+                         resources)
 
 
 def ship_to_moon_from_moons(n=9999):
@@ -40,16 +40,16 @@ def ship_to_moon_from_moons(n=9999):
     where_Decathlon = {'galaxy': 1, 'system': 435, 'position': 8, 'type':3}
     mission = Missions['Park']
     resources = {'metal': 999999999, 'crystal': 999999999, 'deuterium': 9999999999}
-    ogame.send_fleet(ogame.get_moon_ids()[1], ships, speed, where_Decathlon, mission, resources) 
-    ogame.send_fleet(ogame.get_moon_ids()[2], ships, speed, where_Saturn, mission, resources) 
- 
+    ogame.send_fleet(ogame.get_moon_ids()[1], ships, speed, where_Decathlon, mission, resources)
+    ogame.send_fleet(ogame.get_moon_ids()[2], ships, speed, where_Saturn, mission, resources)
 
 
-if __name__=="__main__":    
+
+if __name__=="__main__":
     ogame = log_in()
     if ogame.is_under_attack():
         ship_to_moon_from_moons(n=9999)
-        ship_slow_everything_to_Moons(n=1)
+        ship_slow_everything_to_Moons(n=9999)
         ogame.logout()
     else:
         ogame.logout()
