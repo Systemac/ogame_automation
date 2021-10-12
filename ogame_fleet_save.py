@@ -2,7 +2,7 @@ from ogame import OGame
 from ogame.constants import Ships, Speed, Missions, Buildings, Research, Defense
 
 def log_in():
-    return OGame('Indus', 'hotgigi82@hotmail.com', '1101982.Ogame')
+    return OGame('Indus', 'hotgigi82@hotmail.com', 'my_password')
 
 def ship_to_moon_from_moons(n=9999):
     ships = [(Ships['LargeCargo'], n) ,(Ships['LightFighter'], n), (Ships['EspionageProbe'], n),(Ships['Cruiser'], n), (Ships['Recycler'], n), (Ships['Battleship'], n),
